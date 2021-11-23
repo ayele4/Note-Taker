@@ -17,7 +17,7 @@ app.use(express.static('public')); // change how we import assets
 
 //view route
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/noteshtml'));
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
 // corresponds with index.js const getNotes
@@ -28,7 +28,7 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     req.body.id = uuidv4(); // adding new id property and adding unique id with uuid
     db.push(req.body);
-    fs.writeFileSync('./db/db.json', Json.stringify(db));
+    fs.writeFileSync('./db/db.json', JSON.stringify(db));
     res.send('everything savy') // res inmportant to closing loop / can be blank
 });
 
@@ -39,7 +39,7 @@ app.delete('/api/notes/:id', (req, res) => {
     });
     db = filterDb
     fs.writeFileSync('./db/db.json', JSON.stringify(filterDb));
-    res.send(boom)
+    res.send('boom')
 });
 
 app.listen(PORT, () =>
