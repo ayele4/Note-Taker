@@ -7,8 +7,9 @@ This application will uses Express.js for the backend. A User can save and retri
 ## Instractional
 
 scree shot of instalation
+<img width="1147" alt="Screen Shot 2021-11-22 at 7 51 26 PM" src="https://user-images.githubusercontent.com/84227686/142969381-4affd2f3-b5c9-439d-a84b-93227968696b.png">
 
-Screen Shot 2021-11-22 at 7.51.26 PM
+
 
 # how to start the server -
 
